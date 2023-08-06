@@ -1,7 +1,16 @@
 ---
 title: "A3: Incarceration"
+author: "Lufei Chen"
+date: "8/4/2023"
 output: html_document
 ---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(usmap)
+```
 
 ### Introduction
 
@@ -11,42 +20,60 @@ An introduction of the problem domain and a description of the variable(s) you a
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-These will likely be calculated using your DPLYR skills, answering questions such as: 
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
 
 ### The Dataset
 
-Who collected the data?  
-How was the data collected or generated?  
+Who collected the data? 
+
+The data was collected by the Vera Institute of Justice.
+
+
+How was the data collected or generated? 
+
+The dataset was collected using two data sources from the Bureau of Justice Statistics (BJS): the Census of Jails (COJ) and the Annual Survey of Jails (ASJ).  This data was collected through surveys, administrative records, and other forms of data collection.
+
+
 Why was the data collected?  
+
+The purpose of collecting the data is to understand the trends of prisons and their populations in the United States.  By analyzing the dataset, we can study the influence and differences in incarceration situations based on factors such as race, gender, and region. Through this analysis, we aim to encourage government and judicial reforms to achieve a more equitable justice system. Moreover, we hope that through this dataset we can gain a more realistic understanding of the situation of incarceration in the United States.
+
+
 How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
+
+I used the split files called the dataset about prison population per county/state. There are 153811 observations.
+
+
+How many features (columns) are in the data?
+
+I used the split files called the dataset about prison population per county/state. There are 9 features.
+
+
+What, if any, ethical questions or questions of power do you need to consider when working with this data? 
+
+While working with this data, we need to consider some privacy issues. Data related to the prison population could contain sensitive information. Although the data does not include detailed personal information and identities, it cannot prevent it from being inferred from the data. So we should ensure that personal privacy will not be disclosed. Moreover, we need to consider the validity and accuracy of the data, and whether there is bias.
+
+
 What are possible limitations or problems with this data?   (at least 200 words)
 
+One of the primary concerns we need to consider is whether the data on the US prison population is complete. Notably, when drawing the map, I found that data for some states were missing, which could easily lead to bias in the results or an inaccurate description of the overall trend. Additionally, the data set lacks data during certain years such as 2018, which could lead to misjudgment of the trend of the prison population, thereby affecting the validity of the analysis and leading to potentially misleading conclusions.
+
+We also need to consider the accuracy of the data. If the sources of the data set are not reliable, misunderstandings of data requirements or inaccurate data entry can lead to errors in their reported data. For example, reporting errors in the number of inmates of certain races and genders may lead to underestimation and distort the results. Moreover, when the prison population data is not all collected by census surveys, there could be sampling biases. In other words, when the surveyed inmate sample does not represent more or all of the population, there would be deviations and errors in the data, affecting its accuracy. Finally, if there is a gap in the data between years, it may also affect the trend judgment of the prison population. 
 
 ### Trends Over Time Chart
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+<br>
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+library(ggplot2)
+time_trend_chart
+```
+<br>
+
+``````{r, echo = FALSE, code = readLines("chart1.R")}
+
 ```
 
 ### Variable Comparison Chart
