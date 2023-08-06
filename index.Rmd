@@ -10,7 +10,10 @@ library(dplyr)
 library(tidyverse)
 library(ggplot2)
 library(usmap)
+<<<<<<< HEAD
 source("code.R") 
+=======
+>>>>>>> c480cf56e2efb7a38cc8ab3d6d80b3e58f7cea66
 ```
 
 ### Introduction
@@ -21,6 +24,7 @@ The United States has the highest incarceration rate in the world, a problem tha
 
 I was curious to know what is the highest rate of incarceration in the total population, and in which city it occurs. Through my research, I found that in 2006, Mcpherson County, NE, had a strikingly high incarceration rate of 33.78%. This result underscores the disparities in incarceration rates across different regions within the United States.
 
+<<<<<<< HEAD
 Additionally, I wondered whether there were connections and differences between states and the prison population. I discovered that the five states with the highest incarceration rates in the United States are California, Texas, Florida, New York, and Georgia. I used the term 'top_five_prison_pop' in the code to denote this. This signifies that California has the state with the highest number of incarcerated individuals.
 
 In an effort to identify which city in California has had the highest incarcerated population in recent years, I used the "county" variable for this investigation. In 2016, Los Angeles had the largest incarcerated population, reaching 42,940 people.
@@ -47,19 +51,71 @@ I used the split files called the dataset about prison population per county/sta
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
 While working with this data, we need to consider some privacy issues. Data related to the prison population could contain sensitive information. Although the data does not include detailed personal information and identities, it cannot prevent it from being inferred from the data. So we should ensure that personal privacy will not be disclosed. Moreover, we need to consider the validity and accuracy of the data, and whether there is bias.
 
+=======
+
+### The Dataset
+
+Who collected the data? 
+
+The data was collected by the Vera Institute of Justice.
+
+
+How was the data collected or generated? 
+
+The dataset was collected using two data sources from the Bureau of Justice Statistics (BJS): the Census of Jails (COJ) and the Annual Survey of Jails (ASJ).  This data was collected through surveys, administrative records, and other forms of data collection.
+
+
+Why was the data collected?  
+
+The purpose of collecting the data is to understand the trends of prisons and their populations in the United States.  By analyzing the dataset, we can study the influence and differences in incarceration situations based on factors such as race, gender, and region. Through this analysis, we aim to encourage government and judicial reforms to achieve a more equitable justice system. Moreover, we hope that through this dataset we can gain a more realistic understanding of the situation of incarceration in the United States.
+
+
+How many observations (rows) are in your data?  
+
+I used the split files called the dataset about prison population per county/state. There are 153811 observations.
+
+
+How many features (columns) are in the data?
+
+I used the split files called the dataset about prison population per county/state. There are 9 features.
+
+
+What, if any, ethical questions or questions of power do you need to consider when working with this data? 
+
+While working with this data, we need to consider some privacy issues. Data related to the prison population could contain sensitive information. Although the data does not include detailed personal information and identities, it cannot prevent it from being inferred from the data. So we should ensure that personal privacy will not be disclosed. Moreover, we need to consider the validity and accuracy of the data, and whether there is bias.
+
+
+>>>>>>> c480cf56e2efb7a38cc8ab3d6d80b3e58f7cea66
 What are possible limitations or problems with this data?   (at least 200 words)
 One of the primary concerns we need to consider is whether the data on the US prison population is complete. Notably, when drawing the map, I found that data for some states were missing, which could easily lead to bias in the results or an inaccurate description of the overall trend. Additionally, the data set lacks data during certain years such as 2018, which could lead to misjudgment of the trend of the prison population, thereby affecting the validity of the analysis and leading to potentially misleading conclusions.
 
 We also need to consider the accuracy of the data. If the sources of the data set are not reliable, misunderstandings of data requirements or inaccurate data entry can lead to errors in their reported data. For example, reporting errors in the number of inmates of certain races and genders may lead to underestimation and distort the results. Moreover, when the prison population data is not all collected by census surveys, there could be sampling biases. In other words, when the surveyed inmate sample does not represent more or all of the population, there would be deviations and errors in the data, affecting its accuracy. Finally, if there is a gap in the data between years, it may also affect the trend judgment of the prison population. 
 
+One of the primary concerns we need to consider is whether the data on the US prison population is complete. Notably, when drawing the map, I found that data for some states were missing, which could easily lead to bias in the results or an inaccurate description of the overall trend. Additionally, the data set lacks data during certain years such as 2018, which could lead to misjudgment of the trend of the prison population, thereby affecting the validity of the analysis and leading to potentially misleading conclusions.
+
+We also need to consider the accuracy of the data. If the sources of the data set are not reliable, misunderstandings of data requirements or inaccurate data entry can lead to errors in their reported data. For example, reporting errors in the number of inmates of certain races and genders may lead to underestimation and distort the results. Moreover, when the prison population data is not all collected by census surveys, there could be sampling biases. In other words, when the surveyed inmate sample does not represent more or all of the population, there would be deviations and errors in the data, affecting its accuracy. Finally, if there is a gap in the data between years, it may also affect the trend judgment of the prison population. 
 
 ### Trends Over Time Chart
 
 For the first chart, I used a line chart to represent the changing trends of male and female prison populations from 1970 to 2018. Several patterns emerge from this chart. It's clear that throughout this period, the number of males in prison is significantly higher than that of females. Secondly, the female prison population has shown a relatively stable and slight increase over many years. From 1970 to 1980, the growth rates of male and female prison populations were roughly similar, both showing relatively stable trends. However, starting from 1980, the male prison population saw a large and sharp increase, with the prison population amounting to over 900,000 in 2010. The stark contrast in the growth rates of male and female prison populations over time highlights the gender disparities in the US incarceration system. This suggests that there might be biases in law enforcement and judiciary that led to the significant increase in male prison population.
 
+<<<<<<< HEAD
 <br>
 ```{r, echo = FALSE, code = readLines("chart1.R"), message = FALSE, results='hide',warning = FALSE}
 source("chart1.R")
+=======
+Here's an example of how to run an R script inside an RMarkdown file:
+
+<br>
+```{r, echo=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+library(ggplot2)
+time_trend_chart
+```
+<br>
+
+``````{r, echo = FALSE, code = readLines("chart1.R")}
+
+>>>>>>> c480cf56e2efb7a38cc8ab3d6d80b3e58f7cea66
 ```
 
 <br>
